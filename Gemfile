@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'listen'
 gem 'bcrypt', '~> 3.1.7'
+gem 'materialize-sass'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
