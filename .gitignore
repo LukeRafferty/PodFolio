@@ -22,3 +22,5 @@
 
 #ignore env file
 .env
+
+/coverage
