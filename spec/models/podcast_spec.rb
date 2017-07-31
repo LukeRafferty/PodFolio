@@ -11,6 +11,14 @@ RSpec.describe Podcast, type: :model do
 
     expect(podcast_one).to be_valid
   end
+
+  it "has a name" do
+    podcast_one = Podcast.new
+    podcast_one.name = 'TestPodcast'
+
+    expect(podcast_one).to be_valid
+  end
+  
   it "does not provide enough information" do
     podcast_one = Podcast.new
     podcast_one.description = "TESTDescription"
