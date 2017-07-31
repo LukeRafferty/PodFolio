@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+# require 'audiosearch'
+# # create a client
+# client = Audiosearch::Client.new(
+#   :id     => "#{ENV['AS_ID']}",
+#   :secret => "#{ENV['AS_SECRET']}",
+#   :host   => 'https://www.audiosear.ch/',
+#   :debug  => false,
+# )
+#
+# show = client.get('/shows/1234')
