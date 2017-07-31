@@ -1,9 +1,15 @@
-<h1>Login</h1>
+<div>
+  <h1>Login</h1>
+</div>
 
 <%= form_tag '/login' do %>
-
-  Username: <%= text_field_tag :username %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div>
+    Username: <%= text_field_tag :username %>
+  </div>
+  <div>
+    Password: <%= password_field_tag :password %>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Log In
+  </button>
 
 <% end %>
