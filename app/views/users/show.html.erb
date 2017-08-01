@@ -1,0 +1,9 @@
+
+<div>
+  <h1> <%= @user.username %>  </h1>
+</div>
+
+
+<% @podcasts.each do |podcast| %>
+  <p> <%= podcast.name %> </p>
+<% end %>

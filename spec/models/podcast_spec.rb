@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Podcast, type: :model do
   it { should have_valid(:name).when('name') }
   it { should_not have_valid(:name).when(nil) }
+  it { should have_many(:users).through(:selected_podcasts) }
 
   it "has a name" do
     podcast_one = Podcast.new
@@ -18,7 +19,7 @@ RSpec.describe Podcast, type: :model do
 
     expect(podcast_one).to be_valid
   end
-  
+
   it "does not provide enough information" do
     podcast_one = Podcast.new
     podcast_one.description = "TESTDescription"
