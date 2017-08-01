@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it { should have_valid(:username).when('username') }
   it { should_not have_valid(:username).when(nil) }
+  it { should have_many(:podcasts).through(:selected_podcasts) }
 
   it "has matching password confirmation" do
     user_one = User.new

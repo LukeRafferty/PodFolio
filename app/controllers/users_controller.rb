@@ -3,14 +3,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
+    @user = User.find(params[:id])
+    @podcasts = @user.podcasts
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
-      redirect_to '/'
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to @user
     else
       redirect_to '/signup'
     end
