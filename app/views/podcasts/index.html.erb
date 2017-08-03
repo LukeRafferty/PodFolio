@@ -14,16 +14,18 @@
 
 <% end %>
 
+<br>
 
 <% if @res %>
   <% @res.results.each do |key, show| %>
     <%= key.title %><br>
     <%= key.description %>
     <% key.id %>
-      <form method="post" action="/controller/new" class="button_to">
+      <form method="post" action="/podcasts" class="button_to">
+        <input type="hidden" id="title" name="title" value="<%= key.title %>" />
+        <input type="hidden" id="description" name="description" value="<%= key.description %>" />
         <input value="Save podcast" type="submit" />
       </form>
     <br><br>
   <% end %>
-
 <% end %>

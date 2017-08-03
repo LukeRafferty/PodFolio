@@ -1,6 +1,7 @@
 require 'audiosearch'
 
 class PodcastsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   def new
   end
 
@@ -13,7 +14,7 @@ class PodcastsController < ApplicationController
     )
     @user = User.find(session[:user_id])
 
-    if !params["search"].nil?
+    if !params["search"].nil? && params["search"] != ''
       search = params["search"]
       @res = client.search({ q: search }, 'shows')
 
@@ -22,6 +23,20 @@ class PodcastsController < ApplicationController
 
 
   def create
+    binding.pry
+    @user = User.find(session[:user_id])
+    @podcast = Podcast.find_or_initialize_by(name: params["title"], description: params["description"])
+    if @podcast.save
+      @selection = SelectedPodcast.new(user: @user, podcast: @podcast)
+      if @selection.save
+        flash[:notice] = 'Podcast added to your portfolio'
+        redirect_to @user
+      else
+        flash[:alert] = "Something went wrong"
+      end
+    else
+      flash[:alert] = "Something went wrong"
+    end
   end
 
   def show

@@ -2,3 +2,7 @@
 
 <div id="app">
 </div>
+
+<% if (session[:user_id]) %>
+  <%= link_to "Go to your user page", user_path(session[:user_id]) %>
+<% end %>
