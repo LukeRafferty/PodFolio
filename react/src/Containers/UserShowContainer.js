@@ -21,7 +21,6 @@ class UserShowContainer extends Component {
   }
 
   render() {
-
     let podcasts = this.state.podcasts.map((podcast, index) => {
       return (
         <PodcastShowTile
