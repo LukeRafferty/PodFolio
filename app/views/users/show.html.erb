@@ -1,12 +1,14 @@
 
 <div class="container">
-  <div>
+  <div class="center-align">
     <h1> <%= @user.username %>  </h1>
   </div>
 
 
   <% @podcasts.each do |podcast| %>
-    <p> <%= podcast.name %> </p>
+    <div>
+      <p> <%= podcast.name %> </p>
+    </div>
   <% end %>
 
 
