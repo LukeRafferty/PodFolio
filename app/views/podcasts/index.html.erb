@@ -1,31 +1,38 @@
-<div>
-  <h1>Add a Podcast</h1>
-</div>
+<div class="container">
+  <div>
+    <h1>Add a Podcast</h1>
+  </div>
 
 
-<div id="app">
+  <div id="app">
 
-</div>
+  </div>
 
 
-<%= form_tag(podcasts_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Find a new podcast" %>
-  <%= submit_tag "Search", :name => nil, class: "button" %>
+  <%= form_tag(podcasts_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Find a new podcast" %>
+    <%= submit_tag "Search", :name => nil, class: "button" %>
 
-<% end %>
-
-<br>
-
-<% if @res %>
-  <% @res.results.each do |key, show| %>
-    <%= key.title %><br>
-    <%= key.description %>
-    <% key.id %>
-      <form method="post" action="/podcasts" class="button_to">
-        <input type="hidden" id="title" name="title" value="<%= key.title %>" />
-        <input type="hidden" id="description" name="description" value="<%= key.description %>" />
-        <input value="Save podcast" type="submit" />
-      </form>
-    <br><br>
   <% end %>
-<% end %>
+
+  <br>
+
+  <% if @res %>
+    <% @res.results.each do |key, show| %>
+      <div class="hoverable">
+      <%= key.title %><br>
+      <%= key.description %>
+      <% key.id %>
+        <div>
+        <form method="post" action="/podcasts" class="button_to">
+          <input type="hidden" id="title" name="title" value="<%= key.title %>" />
+          <input type="hidden" id="description" name="description" value="<%= key.description %>" />
+          <input value="Save podcast" type="submit" />
+        </form>
+        </div>
+      <br>
+      </div>
+      <br>
+    <% end %>
+  <% end %>
+</div>
