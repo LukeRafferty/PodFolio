@@ -1,14 +1,16 @@
 
-<div>
-  <h1> <%= @user.username %>  </h1>
+<div class="container">
+  <div>
+    <h1> <%= @user.username %>  </h1>
+  </div>
+
+
+  <% @podcasts.each do |podcast| %>
+    <p> <%= podcast.name %> </p>
+  <% end %>
+
+
+
+
+  <%= link_to "Add a podcast", podcasts_path %>
 </div>
-
-
-<% @podcasts.each do |podcast| %>
-  <p> <%= podcast.name %> </p>
-<% end %>
-
-
-
-
-<%= link_to "Add a podcast", podcasts_path %>
