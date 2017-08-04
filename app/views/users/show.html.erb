@@ -1,15 +1,17 @@
+<div class="container">
+  <div>
+    <h3> <%= @user.username %>'s PodFolio </h3>
+  </div>
 
-<div>
-  <h1> <%= @user.username %>  </h1>
+  <% @podcasts.each do |podcast| %>
+    <div class="hoverable">
+      <p> <%= podcast.name %> </p>
+    </div>
+  <% end %>
+
+
+  <div id="app">
+  </div>
+
+  <%= link_to "Add a podcast", podcasts_path %>
 </div>
-
-
-<% @podcasts.each do |podcast| %>
-  <p> <%= podcast.name %> </p>
-<% end %>
-
-
-<div id="app">
-</div>
-
-<%= link_to "Add a podcast", podcasts_path %>
