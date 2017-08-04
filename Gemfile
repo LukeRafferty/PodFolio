@@ -10,6 +10,7 @@ gem 'rails', '5.0.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass'
 gem 'uglifier', '>= 1.3.0'
+gem 'audiosearch'
 
 group :development, :test do
   gem 'capybara'

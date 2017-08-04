@@ -6,13 +6,13 @@ import {
 } from 'react-router-dom'
 import UserShowContainer from './UserShowContainer'
 
-
 const App = props => {
   return(
     <Router>
       <div>
 
-      <Route exact path='/users/:id' component={UserShowContainer} />
+        <Route exact path='/users/:id' component={UserShowContainer} />
+
 
       </div>
     </Router>

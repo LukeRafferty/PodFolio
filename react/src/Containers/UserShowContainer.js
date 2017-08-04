@@ -13,6 +13,7 @@ class UserShowContainer extends Component {
     .then(response => {
       return response.json();
     })
+
     .then(body => {
       this.setState({
         podcasts: body.podcasts
@@ -21,14 +22,15 @@ class UserShowContainer extends Component {
   }
 
   render() {
-
     let podcasts = this.state.podcasts.map((podcast, index) => {
       return (
+
         <PodcastShowTile
           key = {index}
           name = {podcast.name}
         />
       )
+
     })
 
     return(
