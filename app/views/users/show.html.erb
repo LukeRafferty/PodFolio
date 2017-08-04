@@ -1,18 +1,15 @@
 
-<div class="container">
-  <div class="center-align">
-    <h1> <%= @user.username %>  </h1>
-  </div>
-
-
-  <% @podcasts.each do |podcast| %>
-    <div>
-      <p> <%= podcast.name %> </p>
-    </div>
-  <% end %>
-
-
-
-
-  <%= link_to "Add a podcast", podcasts_path %>
+<div>
+  <h1> <%= @user.username %>  </h1>
 </div>
+
+
+<% @podcasts.each do |podcast| %>
+  <p> <%= podcast.name %> </p>
+<% end %>
+
+
+<div id="app">
+</div>
+
+<%= link_to "Add a podcast", podcasts_path %>
