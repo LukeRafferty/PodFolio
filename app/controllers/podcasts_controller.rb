@@ -23,11 +23,10 @@ class PodcastsController < ApplicationController
 
 
   def create
-    binding.pry
     @user = User.find(session[:user_id])
     @podcast = Podcast.find_or_initialize_by(name: params["title"], description: params["description"])
     if @podcast.save
-      @selection = SelectedPodcast.new(user: @user, podcast: @podcast)
+      @selection = SelectedPodcast.find_or_initialize_by(user: @user, podcast: @podcast)
       if @selection.save
         flash[:notice] = 'Podcast added to your portfolio'
         redirect_to @user

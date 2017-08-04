@@ -5,8 +5,6 @@ import {
   Link
 } from 'react-router-dom'
 import UserShowContainer from './UserShowContainer'
-import PodcastIndexContainer from './PodcastIndexContainer'
-
 
 const App = props => {
   return(
