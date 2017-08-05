@@ -1,17 +1,17 @@
 <div class="container">
-  <div>
+  <div class="align-center">
     <h3> <%= @user.username %>'s PodFolio </h3>
   </div>
 
   <% @podcasts.each do |podcast| %>
-    <div class="hoverable">
-      <p> <%= podcast.name %> </p>
+    <div class="hoverable card-panel cyan lighten-4" id="userPodcastTile">
+      <h5 class="grey-text text-darken-4"> <%= podcast.name %> </h5>
     </div>
   <% end %>
-
-
+  <div class="btn center-align">
+    <%= link_to "Add a podcast to your collection", podcasts_path, {:style=>'color:#FFFFFF;'} %>
+  </div>
   <div id="app">
   </div>
 
-  <%= link_to "Add a podcast", podcasts_path %>
 </div>

@@ -1,8 +1,10 @@
-<h1> HOMEPAGE!!!!!!!!!! </h1>
+<h1 class="center-align"> HOMEPAGE! </h1>
 
 <div id="app">
 </div>
 
-<% if (session[:user_id]) %>
-  <%= link_to "Go to your user page", user_path(session[:user_id]) %>
-<% end %>
+<div class="btn center-align">
+  <% if (session[:user_id]) %>
+    <%= link_to "Go to your user page", user_path(session[:user_id]), {:style=>'color:#FFFFFF;'}%>
+  <% end %>
+</div>
