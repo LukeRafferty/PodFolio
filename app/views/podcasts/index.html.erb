@@ -21,18 +21,28 @@
   <% if @res %>
     <% @res.results.each do |key, show| %>
       <div class="hoverable card-panel cyan lighten-4 row">
+
         <div class="col s5">
           <h4><%= key.title %></h4><br>
         </div>
+
         <div class="col s7">
           <%= key.description %>
         </div>
+
+        <div>
+          <p> Audiosearch buzz score: <%= key.buzz_score %> </p>
+        </div>
+
         <% key.id %>
+
       </div>
       <div>
         <form method="post" action="/podcasts" class="button_to waves-effect waves-light btn">
           <input type="hidden" id="title" name="title" value="<%= key.title %>" />
           <input type="hidden" id="description" name="description" value="<%= key.description %>" />
+          <input type="hidden" id="buzzscore" name="buzzscore" value="<%= key.buzz_score %>" />
+          <input type="hidden" id="audiosearch_id" name="audiosearch_id" value="<%= key.id %>" />
           <input value="Save podcast" type="submit" />
         </form>
       </div>

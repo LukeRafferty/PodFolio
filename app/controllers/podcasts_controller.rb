@@ -13,7 +13,7 @@ class PodcastsController < ApplicationController
       :debug  => false,
     )
     @user = User.find(session[:user_id])
-
+    
     if !params["search"].nil? && params["search"] != ''
       search = params["search"]
       @res = client.search({ q: search }, 'shows')
