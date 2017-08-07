@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 
 
   resources :users
-
   resources :podcasts
+  resources :selected_podcasts
 
   namespace :api do
     namespace :v1 do

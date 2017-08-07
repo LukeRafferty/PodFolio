@@ -13,6 +13,7 @@ feature "user signs in" do
 
     expect(page).to have_content("Signed in as")
     expect(page).to have_content("Sign Out")
+    expect(page).to have_content(user.username)
   end
 
   it "fails to sign in" do
@@ -23,5 +24,6 @@ feature "user signs in" do
     click_button 'Sign In'
 
     expect(page).to_not have_content("Signed in as")
+    expect(page).to_not have_content(user.username)
   end
 end
