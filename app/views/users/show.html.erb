@@ -1,17 +1,18 @@
 <div class="container">
-  <div class="align-center">
+  <div class="center-align">
     <h3> <%= @user.username %>'s PodFolio </h3>
   </div>
 
   <% @selected_podcasts.each do |selected_podcast| %>
     <% podcast = selected_podcast.podcast %>
     <div class="hoverable card-panel cyan lighten-4" id="userPodcastTile">
-      <div>
-        <h5 class="grey-text text-darken-4"> <%= podcast.name %> </h5>
+      <div >
+        <%= link_to "#{podcast.name}", podcast_path(podcast.id), {:style=>'color:black;'} %>
       </div>
       <% if @user.id == session[:user_id] %>
-        <%= link_to "Destroy", selected_podcast_path(selected_podcast), method: :delete,
-        data: { confirm: "You sure?" } %>
+        <div>
+          <%= button_to "Remove", selected_podcast_path(selected_podcast), method: :delete, data: { confirm: "You sure?" }  %>
+        </div>
       <% end %>
     </div>
   <% end %>

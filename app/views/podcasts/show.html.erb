@@ -1,1 +1,22 @@
-<h1> Test </h1>
+<div class="container center-align">
+  <div>
+    <h1> <%= @podcast.name %>  </h1>
+  </div>
+
+  <div class="left-align">
+    <p> <%= @podcast.description %> </p>
+  </div>
+
+
+
+
+
+  <div>
+    <% if @podcast.selected_podcasts.count == 1 %>
+      <p> 1 user is following this podcast. </p>
+    <% else %>
+      <p> <%= @podcast.selected_podcasts.count %> users are following this podcast. </p>
+    <% end %>
+  </div>
+
+</div>
