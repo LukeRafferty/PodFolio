@@ -5,7 +5,10 @@
 
   <% @podcasts.each do |podcast| %>
     <div class="hoverable card-panel cyan lighten-4" id="userPodcastTile">
-      <h5 class="grey-text text-darken-4"> <%= podcast.name %> </h5>
+      <div>
+        <h5 class="grey-text text-darken-4"> <%= podcast.name %> </h5>
+      </div>
+      <button class="waves-effect waves-light btn-flat">Remove</button>
     </div>
   <% end %>
   <div class="btn center-align">
