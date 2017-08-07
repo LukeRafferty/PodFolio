@@ -3,12 +3,16 @@
     <h3> <%= @user.username %>'s PodFolio </h3>
   </div>
 
-  <% @podcasts.each do |podcast| %>
+  <% @selected_podcasts.each do |selected_podcast| %>
+    <% podcast = selected_podcast.podcast %>
     <div class="hoverable card-panel cyan lighten-4" id="userPodcastTile">
       <div>
         <h5 class="grey-text text-darken-4"> <%= podcast.name %> </h5>
       </div>
-      <button class="waves-effect waves-light btn-flat">Remove</button>
+      <% if @user.id == session[:user_id] %>
+        <%= link_to "Destroy", selected_podcast_path(selected_podcast), method: :delete,
+        data: { confirm: "You sure?" } %>
+      <% end %>
     </div>
   <% end %>
   <div class="btn center-align">

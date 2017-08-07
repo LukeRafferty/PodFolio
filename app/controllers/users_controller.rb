@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   def new
   end
 
   def show
     @user = User.find(params[:id])
-    @podcasts = @user.podcasts
+    @selected_podcasts = @user.selected_podcasts
   end
 
   def create
@@ -16,6 +17,8 @@ class UsersController < ApplicationController
       redirect_to '/signup'
     end
   end
+
+
 
   private
   def user_params
