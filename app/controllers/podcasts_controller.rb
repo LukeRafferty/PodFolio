@@ -13,7 +13,7 @@ class PodcastsController < ApplicationController
       :debug  => false,
     )
     @user = User.find(session[:user_id])
-    
+
     if !params["search"].nil? && params["search"] != ''
       search = params["search"]
       @res = client.search({ q: search }, 'shows')
@@ -24,9 +24,10 @@ class PodcastsController < ApplicationController
 
   def create
     @user = User.find(session[:user_id])
-    @podcast = Podcast.find_or_initialize_by(name: params["title"], description: params["description"])
+    @podcast = Podcast.find_or_initialize_by(name: params["title"], description: params["description"], buzzscore: params["buzzscore"], audiosearch_id: params["audiosearch_id"], img_url: params["img_url"])
     if @podcast.save
       @selection = SelectedPodcast.find_or_initialize_by(user: @user, podcast: @podcast)
+
       if @selection.save
         flash[:notice] = 'Podcast added to your portfolio'
         redirect_to @user
