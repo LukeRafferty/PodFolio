@@ -1,6 +1,6 @@
 <div class="container">
   <div class="center-align">
-    <h1>Add a Podcast</h1>
+    <h1 class="noto">Add a Podcast</h1>
   </div>
 
 
@@ -20,25 +20,27 @@
 
   <% if @res %>
     <% @res.results.each do |key, show| %>
-      <div class="hoverable card-panel cyan lighten-4 row">
+      <div class="hoverable card-panel grey lighten-2 row">
+        <div class="row">
+          <div class="center-align">
+            <h4><%= key.title %></h4><br>
+          </div>
 
-        <div class="col s5">
-          <h4><%= key.title %></h4><br>
+
+          <div class="col s8 in-tile-text">
+            <%= key.description %>
+          </div>
+
+          <% if key.image_files %>
+            <div class="col 4">
+              <img width="250" src=<%= key.image_files.first.file.url %>>
+            </div>
+          <% end %>
         </div>
 
-        <div class="col s7">
-          <%= key.description %>
-        </div>
-
-        <div>
+        <div class="">
           <p> Audiosearch buzz score: <%= key.buzz_score %> </p>
         </div>
-
-        <% if key.image_files %>
-          <div class="row center-align">
-            <img src=<%= key.image_files.first.file.url %>>
-          </div>
-        <% end %>
 
         <% key.id %>
 

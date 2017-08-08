@@ -1,6 +1,13 @@
 <div class="container center-align">
+
+  <div class="center-align" id="podcast-show-image">
+    <img width="400" src=<%= @podcast.img_url %>>
+  </div>
+
+
+
   <div>
-    <h1> <%= @podcast.name %>  </h1>
+    <h1 class="noto"> <%= @podcast.name %>  </h1>
   </div>
 
   <div class="left-align">
@@ -22,5 +29,15 @@
       <p> <%= @podcast.selected_podcasts.count %> users are following this podcast. </p>
     <% end %>
   </div>
+
+
+  <% @podcast.users.each do |user| %>
+  <div class="btn">
+    <%= link_to "#{user.username}", user_path(user.id), {:style=>'color:black;'} %> <br>
+  </div>
+  <% end %>
+
+
+
 
 </div>

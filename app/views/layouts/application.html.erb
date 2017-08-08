@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title> PodFolio </title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
@@ -13,14 +14,22 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Font awesome-->
+    <script src="https://use.fontawesome.com/b02189b4dc.js"></script>
 
+    <!-- noto font -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 
+    <!-- libre baskerville font -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <!-- rails asset pipeline -->
     <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
   </head>
   <nav>
     <div class="nav-wrapper cyan darken-4">
 
-      <a href="/home" class="brand-logo">PodFolio</a>
+      <a href="/home" class="brand-logo noto">PodFolio</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
         <% if current_user %>

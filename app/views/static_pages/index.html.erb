@@ -1,12 +1,27 @@
 <div class="container center-align">
-<h1 class="center-align"> HOMEPAGE! </h1>
+  <h1 class="center-align noto"> Welcome to PodFolio </h1>
 
-<div id="app">
-</div>
+  <div id="app">
+  </div>
 
+  <div class="">
+    <p>A place for you to collect, expand and share your collection of podcasts.</p>
+  </div>
+
+
+
+  <br>
   <div class="btn">
     <% if (session[:user_id]) %>
       <%= link_to "Go to your user page", user_path(session[:user_id]), {:style=>'color:#FFFFFF;'}%>
     <% end %>
+  </div>
+  <br>
+  <br>
+  <div class="">
+    <p>Podfolio was created by Luke Rafferty while learning at Launch Academy in Boston. <br> It is powered by the Audiosear.ch API. </p>
+  </div>
+  <div class="">
+    
   </div>
 </div>

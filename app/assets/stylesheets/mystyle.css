@@ -1,0 +1,19 @@
+p {
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+.noto{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.in-tile-text {
+  border: solid;
+  border-width: thin;
+  padding: 3%;
+  margin-top: 0;
+}
+
+#podcast-show-image {
+  margin: 5%;
+}
