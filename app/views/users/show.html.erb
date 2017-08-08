@@ -9,6 +9,9 @@
       <div >
         <%= link_to "#{podcast.name}", podcast_path(podcast.id), {:style=>'color:black;'} %>
       </div>
+      <div class="">
+        <img src="<%= podcast.img_url %>">
+      </div>
       <% if @user.id == session[:user_id] %>
         <div>
           <%= button_to "Remove", selected_podcast_path(selected_podcast), method: :delete, data: { confirm: "You sure?" }  %>
@@ -19,6 +22,7 @@
   <div class="btn center-align">
     <%= link_to "Add a podcast to your collection", podcasts_path, {:style=>'color:#FFFFFF;'} %>
   </div>
+
   <div id="app">
   </div>
 
