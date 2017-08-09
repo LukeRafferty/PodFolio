@@ -1,45 +1,41 @@
 import React, { Component } from 'react'
-import PodcastShowTile from '../Components/PodcastShowTile'
+import UserTile from '../Components/UserTile'
 
-class UserShowContainer extends Component {
+class UserIndexContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      podcasts: []
+      users: []
     }
   }
   componentDidMount() {
-    fetch(`/api/v1/podcasts/1`)
+    fetch(`/api/v1/users`)
     .then(response => {
       return response.json();
     })
-
     .then(body => {
       this.setState({
-        podcasts: body.podcasts
+        users: body.users
       })
     })
   }
-
   render() {
-    let podcasts = this.state.podcasts.map((podcast, index) => {
+    let users = this.state.users.map((user, index) => {
       return (
-
         <UserTile
           key = {index}
-          name = {podcast.name}
+          id = {user.id}
+          username = {user.username}
         />
       )
-
     })
 
     return(
       <div>
-        {podcasts}
+        {users}
       </div>
     )
   }
 }
 
-
-export default UserShowContainer
+export default UserIndexContainer

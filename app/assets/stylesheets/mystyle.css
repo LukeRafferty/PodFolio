@@ -17,3 +17,19 @@ p {
 #podcast-show-image {
   margin: 5%;
 }
+
+div#trash-button {
+  padding: 5px 10px;
+}
+
+#podcast-title{
+  text-decoration: underline;
+}
+
+.homepage-button{
+  margin: .75em;
+}
+
+.home-button-text{
+  color: white;
+}
