@@ -6,7 +6,7 @@
   <% @selected_podcasts.each do |selected_podcast| %>
     <% podcast = selected_podcast.podcast %>
     <div class="hoverable card-panel grey lighten-2">
-      <div class="center-align noto">
+      <div class="center-align noto" id="podcast-title">
         <h4><%= link_to "#{podcast.name}", podcast_path(podcast.id), {:style=>'color:black;'} %></h4>
       </div>
 
@@ -19,8 +19,8 @@
         </div>
       </div>
 
-      <div class="right-align btn" id="trash-button">
-        <% if @user.id == session[:user_id] %>
+      <% if @user.id == session[:user_id] %>
+        <div class="right-align btn">
             <div id="trash-button">
               <%= link_to image_tag("trashcan.png"), selected_podcast_path(selected_podcast), method: :delete, data: { confirm: "You sure?" } %>
             </div>
@@ -31,4 +31,6 @@
   <div class="btn center-align">
     <%= link_to "Add a podcast to your collection", podcasts_path, {:style=>'color:#FFFFFF;'} %>
   </div>
+
+  
 </div>
