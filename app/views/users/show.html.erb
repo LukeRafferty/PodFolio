@@ -5,7 +5,7 @@
 
   <% @selected_podcasts.each do |selected_podcast| %>
     <% podcast = selected_podcast.podcast %>
-    <div class="hoverable card-panel grey lighten-2">
+    <div class="hoverable card-panel red lighten-5">
       <div class="center-align noto" id="podcast-title">
         <h4><%= link_to "#{podcast.name}", podcast_path(podcast.id), {:style=>'color:black;'} %></h4>
       </div>

@@ -12,6 +12,8 @@ p {
   border-width: thin;
   padding: 3%;
   margin-top: 0;
+  height: 250px;
+  overflow-y: auto;
 }
 
 #podcast-show-image {
@@ -32,4 +34,16 @@ div#trash-button {
 
 .home-button-text{
   color: white;
+}
+
+.background{
+  background-color: #E0FBFB;
+}
+
+.show-container{
+  border: solid;
+  background-color: #FFE4E4;
+  border-width: thin;
+  padding: 5%;
+  margin-top: 5em;
 }

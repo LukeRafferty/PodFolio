@@ -3,9 +3,7 @@
     <h1 class="noto">Add a Podcast</h1>
   </div>
 
-
   <div id="app">
-
   </div>
 
   <div>
@@ -20,13 +18,11 @@
 
   <% if @res %>
     <% @res.results.each do |key, show| %>
-      <div class="hoverable card-panel grey lighten-2 row">
-        <div class="row">
-          <div class="center-align">
-            <h4><%= key.title %></h4><br>
-          </div>
-
-
+      <div class="hoverable card-panel red lighten-5">
+        <div class="center-align">
+          <h4><%= key.title %></h4><br>
+        </div>
+        <div class="row center-align">
           <div class="col s8 in-tile-text">
             <%= key.description %>
           </div>
