@@ -2,6 +2,13 @@ p {
   font-family: 'Libre Baskerville', serif;
 }
 
+img {
+  border-radius: 8px;
+}
+
+.hoverable{
+  border-radius: 8px;
+}
 
 .noto{
   font-family: 'Noto Sans', sans-serif;
@@ -11,9 +18,12 @@ p {
   border: solid;
   border-width: thin;
   padding: 3%;
-  margin-top: 0;
   height: 250px;
   overflow-y: auto;
+  background-color: #FCFCFC;
+  margin-top: 0px;
+  text-align: left;
+  border-radius: 8px;
 }
 
 #podcast-show-image {
@@ -24,7 +34,8 @@ div#trash-button {
   padding: 5px 10px;
 }
 
-#podcast-title{
+
+#podcast-title:hover{
   text-decoration: underline;
 }
 
@@ -37,13 +48,46 @@ div#trash-button {
 }
 
 .background{
-  background-color: #E0FBFB;
+  background-image: url("foggy_birds.png");
+  background-repeat: repeat;
 }
 
 .show-container{
   border: solid;
-  background-color: #FFE4E4;
+  background-color: #F8DB71;
   border-width: thin;
   padding: 5%;
   margin-top: 5em;
+}
+
+.nav-style{
+  background-color: #245DA1
+}
+
+.button-style{
+  color: #245DA1;
+}
+
+#user-show-button{
+  margin-top: 1em;
+  margin-left: 13em;
+}
+
+.index-container{
+  background-color: #F8DB71;
+}
+
+#search-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#search-buzz{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#search-tile-text{
+  padding: 3%;
+  text-align: left;
 }
