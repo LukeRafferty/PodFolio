@@ -8,6 +8,10 @@ img {
 
 .hoverable{
   border-radius: 8px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 .noto{
@@ -18,12 +22,13 @@ img {
   border: solid;
   border-width: thin;
   padding: 3%;
-  height: 250px;
+  height: 150px;
   overflow-y: auto;
   background-color: #FCFCFC;
   margin-top: 0px;
   text-align: left;
   border-radius: 8px;
+  align-items: flex-start;
 }
 
 #podcast-show-image {
@@ -36,7 +41,9 @@ div#trash-button {
 
 
 #podcast-title:hover{
+  padding-left: 20px;
   text-decoration: underline;
+
 }
 
 .homepage-button{
@@ -48,20 +55,21 @@ div#trash-button {
 }
 
 .background{
-  background-image: url("foggy_birds.png");
+  background-image: url("hexellence.png");
   background-repeat: repeat;
 }
 
 .show-container{
   border: solid;
-  background-color: #F8DB71;
+  background-color: #8D9EA5;
   border-width: thin;
   padding: 5%;
   margin-top: 5em;
+  border-radius: 5%;
 }
 
 .nav-style{
-  background-color: #245DA1
+  background-color: #8D9EA5;
 }
 
 .button-style{
@@ -74,12 +82,13 @@ div#trash-button {
 }
 
 .index-container{
-  background-color: #F8DB71;
+  background-color: #8D9EA5;
 }
 
 #search-title{
   margin-top: 0px;
   margin-bottom: 0px;
+
 }
 
 #search-buzz{
@@ -90,4 +99,12 @@ div#trash-button {
 #search-tile-text{
   padding: 3%;
   text-align: left;
+}
+
+#show-images{
+  height: 150px;
+}
+
+#search-index-tile-content{
+  padding-right: 0px;
 }
