@@ -18,30 +18,30 @@
 
   <% if @res %>
     <% @res.results.each do |key, show| %>
-      <div class="hoverable card-panel blue lighten-3">
-        <div class="center-align">
+      <div class="hoverable card-panel grey lighten-1">
+        <div class="left-align">
           <h4 id="search-title"><%= key.title %></h4><br>
         </div>
-        <div class="row center-align">
+        <div class="row center-align" id="search-index-tile-content">
 
           <% if key.image_files %>
             <div class="col 4">
-              <img width="250" src=<%= key.image_files.first.file.url %>>
+              <img id="show-images" src=<%= key.image_files.first.file.url %>>
             </div>
           <% end %>
           <div class="col s8 in-tile-text" id="search-tile-text">
             <%= key.description %>
           </div>
         </div>
-
-        <div>
+      <div class="row">
+        <div class="col s4 ">
           <p id="search-buzz"> Audiosearch buzz score: <%= key.buzz_score %> </p>
         </div>
 
         <% key.id %>
 
-      </div>
-      <div>
+
+      <div class="col s3 offset-s5">
         <form method="post" action="/podcasts" class="button_to waves-effect waves-light btn yellow darken-2">
           <input type="hidden" id="title" name="title" value="<%= key.title %>" />
           <input type="hidden" id="description" name="description" value="<%= key.description %>" />
@@ -53,7 +53,8 @@
           <input value="Save podcast" type="submit" />
         </form>
       </div>
-        <br>
+    </div>
+    </div>
         <br>
     <% end %>
   <% end %>
