@@ -20,6 +20,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'vcr'
 end
 
 group :test do

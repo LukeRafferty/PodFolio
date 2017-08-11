@@ -3,9 +3,7 @@
     <h1 class="noto">Add a Podcast</h1>
   </div>
 
-
   <div id="app">
-
   </div>
 
   <div>
@@ -20,33 +18,31 @@
 
   <% if @res %>
     <% @res.results.each do |key, show| %>
-      <div class="hoverable card-panel grey lighten-2 row">
-        <div class="row">
-          <div class="center-align">
-            <h4><%= key.title %></h4><br>
-          </div>
-
-
-          <div class="col s8 in-tile-text">
-            <%= key.description %>
-          </div>
+      <div class="hoverable card-panel blue lighten-3">
+        <div class="center-align">
+          <h4 id="search-title"><%= key.title %></h4><br>
+        </div>
+        <div class="row center-align">
 
           <% if key.image_files %>
             <div class="col 4">
               <img width="250" src=<%= key.image_files.first.file.url %>>
             </div>
           <% end %>
+          <div class="col s8 in-tile-text" id="search-tile-text">
+            <%= key.description %>
+          </div>
         </div>
 
-        <div class="">
-          <p> Audiosearch buzz score: <%= key.buzz_score %> </p>
+        <div>
+          <p id="search-buzz"> Audiosearch buzz score: <%= key.buzz_score %> </p>
         </div>
 
         <% key.id %>
 
       </div>
       <div>
-        <form method="post" action="/podcasts" class="button_to waves-effect waves-light btn">
+        <form method="post" action="/podcasts" class="button_to waves-effect waves-light btn yellow darken-2">
           <input type="hidden" id="title" name="title" value="<%= key.title %>" />
           <input type="hidden" id="description" name="description" value="<%= key.description %>" />
           <input type="hidden" id="buzzscore" name="buzzscore" value="<%= key.buzz_score %>" />

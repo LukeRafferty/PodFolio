@@ -27,8 +27,8 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
   </head>
   <nav>
-    <div class="nav-wrapper cyan darken-4">
-
+    <div class="nav-wrapper nav-style">
+      <i class="fa fa-headphones fa-3x" aria-hidden="true"></i>
       <a href="/home" class="brand-logo left noto">PodFolio</a>
       <ul id="nav-mobile" class="right noto">
         <% if current_user %>
@@ -46,7 +46,7 @@
     </div>
   </nav>
 
-  <body class="FFFFFF lighten-5">
+  <body class="background">
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
