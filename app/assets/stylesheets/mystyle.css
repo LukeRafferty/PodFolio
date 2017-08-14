@@ -21,7 +21,7 @@ img {
 .in-tile-text {
   border: solid;
   border-width: thin;
-  padding: 3%;
+  padding: 1em;
   height: 150px;
   overflow-y: auto;
   background-color: #FCFCFC;
@@ -31,20 +31,6 @@ img {
   align-items: flex-start;
 }
 
-#podcast-show-image {
-  margin: 5%;
-}
-
-div#trash-button {
-  padding: 5px 10px;
-}
-
-
-#podcast-title:hover{
-  padding-left: 20px;
-  text-decoration: underline;
-
-}
 
 .homepage-button{
   margin: .75em;
@@ -76,11 +62,6 @@ div#trash-button {
   color: #245DA1;
 }
 
-#user-show-button{
-  margin-top: 1em;
-  margin-left: 13em;
-}
-
 .index-container{
   background-color: #8D9EA5;
 }
@@ -88,7 +69,6 @@ div#trash-button {
 #search-title{
   margin-top: 0px;
   margin-bottom: 0px;
-
 }
 
 #search-buzz{
@@ -97,14 +77,45 @@ div#trash-button {
 }
 
 #search-tile-text{
-  padding: 3%;
+  padding: 1em;
   text-align: left;
 }
-
+#show-tile-text{
+  padding: 1em;
+  text-align: left;
+}
 #show-images{
   height: 150px;
 }
 
 #search-index-tile-content{
   padding-right: 0px;
+}
+
+#nav-title{
+  position: relative;
+}
+#save-podcast-button{
+  position: absolute;
+}
+
+#podcast-title:hover{
+  padding-left: 10px;
+  padding-right: 0em;
+  text-decoration: underline;
+  float: left;
+}
+
+#podcast-show-image {
+  margin: 5%;
+}
+
+div#trash-button {
+  padding: 5px;
+}
+
+#user-show-delete-button{
+  margin-top: 1em;
+  width:60px;
+  float: right;
 }

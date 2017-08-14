@@ -11,7 +11,7 @@
           <h4><%= link_to "#{podcast.name}", podcast_path(podcast.id), {:style=>'color:black;'} %></h4>
         </div>
       <% if @user.id == session[:user_id] %>
-        <div class="btn yellow darken-2 col s1 offset-s2" id="user-show-button">
+        <div class="btn yellow darken-2 col s1 offset-s1" id="user-show-delete-button">
           <div id="trash-button">
             <%= link_to image_tag("trashcan.png"), selected_podcast_path(selected_podcast), method: :delete, data: { confirm: "You sure?" } %>
           </div>
@@ -20,10 +20,10 @@
       </div>
 
       <div class="row left-align">
-        <div class="col s4">
+        <div class="col 4">
           <img id="show-images" src="<%= podcast.img_url %>">
         </div>
-        <div class="col s8 in-tile-text">
+        <div class="col s8 in-tile-text" id="show-tile-text">
           <p><%= (podcast.description) %></p>
         </div>
       </div>
