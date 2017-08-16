@@ -1,7 +1,7 @@
 # PodFolio
 Store and expand your podcast library! Log in and start searching for podcasts. See who else is listening to your favorite podcasts and then what shows they are listening to in turn.
 
-#Technology
+# Technology
 Ruby on Rails
 React.js
 Heroku
