@@ -9,4 +9,4 @@ Audiosear.ch API
 
 ![Build Status](https://codeship.com/projects/17d55450-5821-0135-2323-26004f53ac16/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/LukeRafferty/PodFolio.png)
-![Coverage Status](https://coveralls.io/repos/LukeRafferty/PodFolio/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/LukeRafferty/PodFolio/badge.svg?branch=master)](https://coveralls.io/github/LukeRafferty/PodFolio?branch=master)
