@@ -24,9 +24,9 @@
         </div>
         <div class="row center-align" id="search-index-tile-content">
 
-          <% if key.image_files %>
+          <% if key.image_urls %>
             <div class="col 4">
-              <img id="show-images" src=<%= key.image_files.first.file.url %>>
+              <img id="show-images" src=<%= key.image_urls.full %>>
             </div>
           <% end %>
           <div class="col s8 in-tile-text" id="search-tile-text">
@@ -47,8 +47,8 @@
           <input type="hidden" id="description" name="description" value="<%= key.description %>" />
           <input type="hidden" id="buzzscore" name="buzzscore" value="<%= key.buzz_score %>" />
           <input type="hidden" id="audiosearch_id" name="audiosearch_id" value="<%= key.id %>" />
-          <% if key.image_files %>
-            <input type="hidden" id="img_url" name="img_url" value="<%= key.image_files.first.file.url %>" />
+          <% if key.image_urls %>
+            <input type="hidden" id="img_url" name="img_url" value="<%= key.image_urls.full %>" />
           <% end %>
           <input value="Save podcast" type="submit" />
         </form>
