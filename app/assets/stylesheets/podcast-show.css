@@ -1,0 +1,12 @@
+.show-container{
+  border: solid;
+  background-color: #8D9EA5;
+  border-width: thin;
+  padding: 5%;
+  margin-top: 5em;
+  border-radius: 5%;
+}
+
+#podcast-show-image {
+  margin: 5%;
+}

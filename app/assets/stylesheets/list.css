@@ -1,0 +1,69 @@
+.hoverable{
+  border-radius: 8px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.in-tile-text {
+  border: solid;
+  border-width: thin;
+  padding: 1em;
+  height: 150px;
+  overflow-y: auto;
+  background-color: #FCFCFC;
+  margin-top: 0px;
+  text-align: left;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+#search-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#search-buzz{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#search-tile-text{
+  padding: 1em;
+  text-align: left;
+}
+
+#show-tile-text{
+  padding: 1em;
+  text-align: left;
+}
+
+div#trash-button {
+  padding: 5px;
+}
+
+#show-images{
+  height: 150px;
+}
+
+#search-index-tile-content{
+  padding-right: 0px;
+}
+
+#save-podcast-button{
+  position: absolute;
+}
+
+#podcast-title:hover{
+  padding-left: 10px;
+  padding-right: 0em;
+  text-decoration: underline;
+  float: left;
+}
+
+
+#user-show-delete-button{
+  margin-top: 1em;
+  width:60px;
+  float: right;
+}

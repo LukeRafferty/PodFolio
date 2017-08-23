@@ -13,4 +13,5 @@ feature "user has a show page" do
 
     expect(page).to have_content("Testcast")
   end
+  #sad path
 end

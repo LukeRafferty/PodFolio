@@ -10,5 +10,8 @@ feature "user adds a podcast to their collection" do
     click_button 'Sign In'
     click_link "Add a podcast to your collection"
     expect(page).to have_content "Add a Podcast"
+
+    #implment VCR tool
   end
+  #add sad path
 end
