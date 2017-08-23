@@ -1,43 +1,8 @@
-p {
-  font-family: 'Libre Baskerville', serif;
+#nav-title{
+  position: relative;
 }
-
-img {
-  border-radius: 8px;
-}
-
-.hoverable{
-  border-radius: 8px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 15px;
-  padding-bottom: 5px;
-}
-
-.noto{
-  font-family: 'Noto Sans', sans-serif;
-}
-
-.in-tile-text {
-  border: solid;
-  border-width: thin;
-  padding: 1em;
-  height: 150px;
-  overflow-y: auto;
-  background-color: #FCFCFC;
-  margin-top: 0px;
-  text-align: left;
-  border-radius: 8px;
-  align-items: flex-start;
-}
-
-
-.homepage-button{
-  margin: .75em;
-}
-
-.home-button-text{
-  color: white;
+.nav-style{
+  background-color: #8D9EA5;
 }
 
 .background{
@@ -45,77 +10,18 @@ img {
   background-repeat: repeat;
 }
 
-.show-container{
-  border: solid;
-  background-color: #8D9EA5;
-  border-width: thin;
-  padding: 5%;
-  margin-top: 5em;
-  border-radius: 5%;
+p {
+  font-family: 'Libre Baskerville', serif;
 }
 
-.nav-style{
-  background-color: #8D9EA5;
+.noto{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+img {
+  border-radius: 8px;
 }
 
 .button-style{
   color: #245DA1;
-}
-
-.index-container{
-  background-color: #8D9EA5;
-}
-
-#search-title{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-#search-buzz{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-#search-tile-text{
-  padding: 1em;
-  text-align: left;
-}
-#show-tile-text{
-  padding: 1em;
-  text-align: left;
-}
-#show-images{
-  height: 150px;
-}
-
-#search-index-tile-content{
-  padding-right: 0px;
-}
-
-#nav-title{
-  position: relative;
-}
-#save-podcast-button{
-  position: absolute;
-}
-
-#podcast-title:hover{
-  padding-left: 10px;
-  padding-right: 0em;
-  text-decoration: underline;
-  float: left;
-}
-
-#podcast-show-image {
-  margin: 5%;
-}
-
-div#trash-button {
-  padding: 5px;
-}
-
-#user-show-delete-button{
-  margin-top: 1em;
-  width:60px;
-  float: right;
 }

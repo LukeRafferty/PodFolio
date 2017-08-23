@@ -13,5 +13,7 @@ feature "user has a show page" do
 
     expect(page).to have_content('Testcast')
     find('#user-show-delete-button').click
+    #bypass browser alert
   end
+  #sad path
 end

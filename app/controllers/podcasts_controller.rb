@@ -5,6 +5,7 @@ class PodcastsController < ApplicationController
   def new
   end
 
+  #audiosearch implementation
   def index
     client = Audiosearch::Client.new(
       :id     => ENV['AS_ID'],
@@ -14,6 +15,7 @@ class PodcastsController < ApplicationController
     )
     @user = User.find(session[:user_id])
 
+    #search field not empty, pass down search value
     if !params["search"].nil? && params["search"] != ''
       search = params["search"]
       @res = client.search({ q: search }, 'shows')
@@ -21,7 +23,7 @@ class PodcastsController < ApplicationController
     end
   end
 
-
+  #receive params from save "form" and create new podcast
   def create
     @user = User.find(session[:user_id])
     @podcast = Podcast.find_or_initialize_by(name: params["title"], description: params["description"], buzzscore: params["buzzscore"], audiosearch_id: params["audiosearch_id"], img_url: params["img_url"])
@@ -39,6 +41,7 @@ class PodcastsController < ApplicationController
     end
   end
 
+  #direct to podcast's page
   def show
     @podcast = Podcast.find(params[:id])
   end

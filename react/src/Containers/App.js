@@ -4,7 +4,6 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import UserShowContainer from './UserShowContainer'
 import UserIndexContainer from './UserIndexContainer'
 
 const App = props => {
@@ -12,7 +11,6 @@ const App = props => {
     <Router>
       <div>
         <Route exact path='/home' component={UserIndexContainer} />
-        <Route exact path='/users/:id' component={UserShowContainer} />
       </div>
     </Router>
   )

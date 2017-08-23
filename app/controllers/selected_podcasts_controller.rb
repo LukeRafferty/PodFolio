@@ -1,5 +1,6 @@
 class SelectedPodcastsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  #removing user - podcast association
   def destroy
     @user = User.find(session[:user_id])
     @podcast_join = SelectedPodcast.find(params[:id])
