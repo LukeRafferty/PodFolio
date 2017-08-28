@@ -19,6 +19,7 @@ class PodcastsController < ApplicationController
     if !params["search"].nil? && params["search"] != ''
       search = params["search"]
       @res = client.search({ q: search }, 'shows')
+      # binding.pry
 
     end
   end
@@ -33,6 +34,7 @@ class PodcastsController < ApplicationController
       if @selection.save
         flash[:notice] = 'Podcast added to your portfolio'
         redirect_to @user
+
       else
         flash[:alert] = "Something went wrong"
       end
