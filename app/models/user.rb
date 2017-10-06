@@ -3,5 +3,6 @@ class User < ApplicationRecord
   validates :username, presence: true
   has_many :selected_podcasts
   has_many :podcasts, through: :selected_podcasts
+  # has_many :friends
 
 end
